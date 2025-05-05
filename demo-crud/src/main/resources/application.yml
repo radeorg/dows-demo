@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    include: hep-mysql,hep-mybatis,hep-snapshot
+    active: dev
+
+
+dows:
+  hep:
+    snapshot:
+      experiment:
+        method: init
+        clazz: org.dows.framework.snapshot.ExperimentInitializer
+        tables:
+          - ddddd
+          - ccccc
+          - fffff
+          - ggggg

@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.dows.framework</groupId>
+        <artifactId>dows-demo</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <groupId>org.dows.saas</groupId>
+    <artifactId>demo-app</artifactId>
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>app-crud</module>
+        <module>app-biz</module>
+        <module>app-instance</module>
+        <module>app-api</module>
+        <module>app-rest</module>
+        <module>app-pojo</module>
+        <module>app-config</module>
+        <module>app-boot</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-boot</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-crud</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-instance</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-pojo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dows.saas</groupId>
+                <artifactId>app-rest</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

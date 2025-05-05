@@ -1,0 +1,9 @@
+dows:
+  hep:
+    snapshot:
+      experiment:
+        method: initExp
+        clazz: org.dows.framework.snapshot.ExperimentInitializer
+        tables:
+          - org.dows.framework.entity.EventEntity
+          - org.dows.framework.entity.FoodRecommendEntity

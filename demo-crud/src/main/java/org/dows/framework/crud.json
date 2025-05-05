@@ -1,0 +1,68 @@
+{
+  "api": "http://localhost:8080/api/v1",
+  "method": "put",
+  "fields": {
+    "id": {
+      "title": "ID",
+      "type": "number",
+      "column": {
+        "width": 50
+      },
+      "form": {
+        "show": false
+      }
+    },
+    "name": {
+      "title": "姓名",
+      "type": "text",
+      "search": {
+        "show": true
+      }
+    },
+    "city": {
+      "title": "城市",
+      "type": "dict-select",
+      "search": {
+        "show": true
+      },
+      "dict": {
+        "value": "id",
+        "label": "text",
+        "data": [
+          {
+            "id": "sz",
+            "text": "深圳",
+            "color": "success"
+          },
+          {
+            "id": "gz",
+            "text": "广州",
+            "color": "primary"
+          },
+          {
+            "id": "bj",
+            "text": "北京"
+          },
+          {
+            "id": "wh",
+            "text": "武汉"
+          },
+          {
+            "id": "sh",
+            "text": "上海"
+          }
+        ]
+      }
+    },
+    "radio": {
+      "title": "状态",
+      "search": {
+        "show": true
+      },
+      "type": "dict-radio",
+      "dict": {
+        "url": "/dicts/OpenStatusEnum?single"
+      }
+    }
+  }
+}

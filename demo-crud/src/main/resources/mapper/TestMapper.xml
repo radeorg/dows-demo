@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dows.framework.mapper.TestMapper">
+    <insert id="saveStudent1" parameterType="org.dows.framework.entity.TestEntity" useGeneratedKeys="true" keyProperty="id">
+        insert into test1(name,deleted) values(#{name},#{deleted})
+    </insert>
+    <insert id="saveStudent2" parameterType="org.dows.framework.entity.TestEntity">
+        insert into test2(test_id,name,deleted) values(#{testId},#{name},#{deleted})
+    </insert>
+    <insert id="saveStudent3" parameterType="org.dows.framework.entity.TestEntity" useGeneratedKeys="true" keyProperty="id">
+        insert into test3(test_id,name,deleted) values(#{testId},#{name},#{deleted})
+    </insert>
+    <select id="getStudentByPrimaryIds" resultType="org.dows.framework.entity.TestEntity">
+        select * from test1
+        <where>
+            test1.id  in
+            <foreach  item="item" index="index" collection="ids" open="(" separator="," close=" )">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+    <select id="getStudentByDistributedIds" parameterType="java.lang.String" resultType="org.dows.framework.entity.TestEntity">
+        select * from test2
+        <where>
+            test2.test_id  in
+            <foreach  item="item" index="index" collection="ids" open="(" separator="," close=" )">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+    <select id="getStudent1Limit10000" resultType="org.dows.framework.entity.TestEntity">
+        select * from test1 limit 200000,10000
+    </select>
+    <select id="getStudent2Limit10000" resultType="org.dows.framework.entity.TestEntity">
+        select * from test2 limit 200000,10000
+    </select>
+    <select id="getStudent3Limit10000" resultType="org.dows.framework.entity.TestEntity">
+        select * from test3 limit 200000,10000
+    </select>
+</mapper>

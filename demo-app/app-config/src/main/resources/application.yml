@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: app
+  profiles:
+    include: app-mysql,app-mybatis
+    active: dev
+
+logging:
+  file:
+    path: classpath:log4j2-app
