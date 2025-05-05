@@ -13,7 +13,7 @@ spring:
     name: demo-oss
 
   profiles:
-    include: oss
+    include: oss,logging
 #    active: sit
 
 ws:
