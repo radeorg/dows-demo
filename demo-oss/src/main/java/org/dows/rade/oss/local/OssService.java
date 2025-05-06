@@ -1,5 +1,6 @@
 package org.dows.rade.oss.local;
 
+import cn.hutool.json.JSONUtil;
 import lombok.RequiredArgsConstructor;
 import org.dows.rade.oss.OssInfo;
 import org.dows.rade.oss.tencent.TencentOssClient;
@@ -21,7 +22,7 @@ public class OssService {
         //OssInfo info = tencentOssClient.upLoad(new File(System.getProperty("user.dir") + File.separator + "1.png"), "2.png", false);
         OssInfo info = tencentOssClient.upLoad(new File(System.getProperty("user.dir") + File.separator + "1.png"), "2.png", true);
 
-
+        System.out.println(JSONUtil.toJsonStr(info));
     }
 
     public void download() throws FileNotFoundException {
