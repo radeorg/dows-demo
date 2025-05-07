@@ -14,8 +14,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="demo-oss" options="-parameters" />
-      <module name="dows-demo" options="-parameters" />
+      <module name="demo-oss" options="-parameters -parameters" />
+      <module name="dows-demo" options="-parameters -parameters" />
     </option>
   </component>
 </project>
