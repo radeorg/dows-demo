@@ -32,7 +32,7 @@ public class OssService {
         String resumeOss = String.format("%s%s", date.getYear(), date.getMonth());
         System.out.println(JSONUtil.toJsonStr(resumeOss));
         Long resumeFileId = System.currentTimeMillis();
-        OssInfo info = tencentOssClient.upLoad(new File(System.getProperty("user.dir") + File.separator + "1.png"), String.format("%s.pdf", formatDate(new Date(), "YYYYMM") + File.separator + resumeFileId), true);
+        OssInfo info = tencentOssClient.upLoad(new File(System.getProperty("user.dir") + File.separator + "1.png"), String.format("%s.pdf", resumeOss + File.separator + resumeFileId), true);
 
         System.out.println(JSONUtil.toJsonStr(info));
     }
